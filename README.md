@@ -1,2 +1,5 @@
 # vue-avatar-or-initials
-Avater or Initials 
+
+Avatar or Initials 
+
+Displays either the initials or the image for an avatar.
