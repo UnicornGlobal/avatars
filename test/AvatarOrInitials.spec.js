@@ -20,6 +20,21 @@ describe('AvatarOrInitials.vue', () => {
     expect(avatarOrInitials.find('.initials').text()).toBe('x')
   })
 
+  it('displays a dark font on light backgrounds', () => {
+    let avatarOrInitials = mount(AvatarOrInitials, {
+      attachToDocument: true,
+      localVue,
+      propsData: {
+        // This title produces a dark initial
+        title: 'abcde',
+        size: 50
+      }
+    })
+
+    expect(avatarOrInitials.vm.initialsStyle).toBe('width: 50px; height: 50px; border-radius: 50px; background-color: #ffeb3b; text-transform: uppercase; color: #000000;');
+    expect(avatarOrInitials.find('.initials').text()).toBe('a')
+  })
+
   it('mounts correctly with full values and renders an image', () => {
     let avatarOrInitials = mount(AvatarOrInitials, {
       attachToDocument: true,
