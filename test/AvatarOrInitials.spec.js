@@ -20,13 +20,29 @@ describe('AvatarOrInitials.vue', () => {
     expect(avatarOrInitials.find('.initials').text()).toBe('x')
   })
 
+  it('displays a dark font on light backgrounds', () => {
+    let avatarOrInitials = mount(AvatarOrInitials, {
+      attachToDocument: true,
+      localVue,
+      propsData: {
+        // This title produces a dark initial
+        title: 'abcde',
+        round: false,
+        size: 50
+      }
+    })
+
+    expect(avatarOrInitials.vm.initialsStyle).toBe('width: 50px; height: 50px; border-radius: 50px; background-color: #ffeb3b; text-transform: uppercase; color: #000000;');
+    expect(avatarOrInitials.find('.initials').text()).toBe('a')
+  })
+
   it('mounts correctly with full values and renders an image', () => {
     let avatarOrInitials = mount(AvatarOrInitials, {
       attachToDocument: true,
       localVue,
       propsData: {
         title: 'AAA',
-        size: 45,
+        size: 5,
         round: true,
         image: 'https://example.com/example.jpeg'
       }
@@ -35,7 +51,7 @@ describe('AvatarOrInitials.vue', () => {
     expect(avatarOrInitials.contains('div')).toBe(true)
     const image = avatarOrInitials.find('.avatar-image')
     expect(image.is('img')).toBe(true)
-    expect(image.element.getAttribute('width')).toBe('45px')
-    expect(image.element.style.borderRadius).toBe('45px')
+    expect(image.element.getAttribute('width')).toBe('5px')
+    expect(image.element.style.borderRadius).toBe('5px')
   })
 })
