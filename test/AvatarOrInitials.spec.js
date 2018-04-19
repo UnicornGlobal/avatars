@@ -34,6 +34,7 @@ describe('AvatarOrInitials.vue', () => {
 
     expect(avatarOrInitials.vm.initialsStyle).toBe('width: 50px; height: 50px; border-radius: 50px; background-color: #ffeb3b; text-transform: uppercase; color: #000000;');
     expect(avatarOrInitials.find('.initials').text()).toBe('a')
+    expect(avatarOrInitials.vm.radius).toBe(undefined);
   })
 
   it('mounts correctly with full values and renders an image', () => {
@@ -53,5 +54,34 @@ describe('AvatarOrInitials.vue', () => {
     expect(image.is('img')).toBe(true)
     expect(image.element.getAttribute('width')).toBe('5px')
     expect(image.element.style.borderRadius).toBe('5px')
+  })
+
+  it('makes use of the user defined colors if present', () => {
+    let avatarOrInitials = mount(AvatarOrInitials, {
+      attachToDocument: true,
+      localVue,
+      propsData: {
+        title: 'AAA',
+        round: true,
+        colour: '#fff',
+        backgroundColour: 'red'
+      }
+    })
+    expect(avatarOrInitials.vm.defaultColour()).toBe('#fff');
+    expect(avatarOrInitials.vm.bgColour()).toBe('red');
+  })
+
+  it('displays a rounded image', () => {
+    let avatarOrInitials = mount(AvatarOrInitials, {
+      attachToDocument: true,
+      localVue,
+      propsData: {
+        title: 'AAA',
+        round: true,
+        color: 'red',
+        round: true
+      }
+    })
+    expect(avatarOrInitials.vm.radius).toBe('border-radius: 40px');
   })
 })
