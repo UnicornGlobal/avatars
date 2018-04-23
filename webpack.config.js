@@ -3,11 +3,14 @@ var webpack = require('webpack')
 var UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
-  entry: './index.js',
+  entry: './src/AvatarOrInitials.vue',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
-    filename: 'build.js'
+    path: path.resolve(__dirname, './'),
+    publicPath: './',
+    filename: 'index.js',
+    libraryTarget: 'umd',
+    library: 'vue-avatar-or-initials',
+    umdNamedDefine: true
   },
   resolve: {
     alias: {

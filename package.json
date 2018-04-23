@@ -13,8 +13,7 @@
     "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha-webpack --webpack-config webpack.config.js --require test/setup.js test/**/*.spec.js"
   },
   "dependencies": {
-    "md5": "^2.2.1",
-    "vue": "^2.4.4"
+    "md5": "^2.2.1"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.12",
