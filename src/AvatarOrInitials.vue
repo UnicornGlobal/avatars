@@ -20,7 +20,7 @@
   .avatar-initials {
     display: flex;
 
-    background: $white;
+    background: white;
     justify-content: center;
     align-items: center;
   }
