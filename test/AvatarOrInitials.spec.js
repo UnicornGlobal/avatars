@@ -1,11 +1,11 @@
 import AvatarOrInitials from '@/AvatarOrInitials.vue'
-import { createLocalVue, mount, shallow } from '@vue/test-utils'
+import { createLocalVue, mount, shallowMount } from '@vue/test-utils'
 
 const localVue = createLocalVue()
 
 describe('AvatarOrInitials.vue', () => {
   it('mounts correctly with minimal values and renders an initial', () => {
-    let avatarOrInitials = shallow(AvatarOrInitials, {
+    let avatarOrInitials = shallowMount(AvatarOrInitials, {
       attachToDocument: true,
       localVue,
       propsData: {
