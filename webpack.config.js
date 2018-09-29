@@ -1,12 +1,20 @@
-var path = require('path')
-var webpack = require('webpack')
+const path = require('path')
+const webpack = require('webpack')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
-  entry: './index.js',
+  entry: './src/AvatarOrInitials.vue',
+  plugins: [
+    new VueLoaderPlugin()
+  ],
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
-    filename: 'build.js'
+    path: path.resolve(__dirname, './'),
+    publicPath: './',
+    filename: 'index.js',
+    libraryTarget: 'umd',
+    library: 'vue-avatar-or-initials',
+    umdNamedDefine: true
   },
   resolve: {
     alias: {
@@ -19,6 +27,12 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader'
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'css-loader'
+        ]
       },
       {
         test: /\.js$/,
@@ -53,10 +67,12 @@ if (process.env.NODE_ENV === 'production') {
         NODE_ENV: '"production"'
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
+    new UglifyJSPlugin({
       sourceMap: true,
-      compress: {
-        warnings: false
+      uglifyOptions: {
+        compress: {
+          warnings: false
+        }
       }
     }),
     new webpack.LoaderOptionsPlugin({
