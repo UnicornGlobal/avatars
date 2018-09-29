@@ -13,3 +13,4 @@ coverage
 *.njsproj
 *.sln
 *.sw[po]
+*.orig
