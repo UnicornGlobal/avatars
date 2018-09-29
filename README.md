@@ -45,6 +45,17 @@ This will display an image in a 46px round avatar
 </avatar-or-initials>
 ```
 
+You can override the default random colours yourself
+
+```
+<avatar-or-initials class="item-avatar"
+                    round
+                    colour="red"
+                    backgroundColour="#fff"
+                    title="Example">
+</avatar-or-initials>
+```
+
 ## Details
 
 It uses the hash of the title to derive a number that it uses to select
@@ -55,6 +66,5 @@ the initial in light or dark font.
 
 # Roadmap
 
-- [ ] - Configure own colours
 - [ ] - Configuree own font
 - [ ] - More efficient selection algo (needs md5.js atm, would be nice to not have that dependency)
