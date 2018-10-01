@@ -1,7 +1,7 @@
 {
   "name": "vue-avatar-or-initials",
   "description": "Easy avatars or initials",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "author": "Darryn Ten",
   "private": false,
   "license": "MIT",
@@ -17,6 +17,10 @@
   "dependencies": {
     "md5": "^2.2.1"
   },
+  "files": [
+    "index.js",
+    "index.js.map"
+  ],
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
