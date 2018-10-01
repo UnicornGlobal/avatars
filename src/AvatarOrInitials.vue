@@ -126,7 +126,7 @@
         return this.title.charAt(0)
       },
       initialsStyle() {
-        return 'width: ' + this.size + 'px; height: ' + this.size + 'px; border-radius: ' + this.size + 'px; background-color: ' + this.bgColour() + '; text-transform: uppercase; color: ' + this.textColour() + ';'
+        return 'width: ' + this.size + 'px; height: ' + this.size + 'px; border-radius: ' + this.size + 'px; background-color: ' + this.bgColour() + '; text-transform: uppercase; color: ' + this.textColour() + '; display: flex; justify-content: center; align-items: center;'
       },
       radius() {
         if (this.round) {
