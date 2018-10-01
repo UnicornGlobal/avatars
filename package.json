@@ -24,14 +24,14 @@
     "ajv": "^6.5.4",
     "babel-loader": "^8.0.0",
     "babel-plugin-istanbul": "^5.0.1",
-    "codecov": "^3.0.0",
-    "cross-env": "^5.0.5",
+    "codecov": "^3.1.0",
+    "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "eslint": "^5.6.1",
     "expect": "^23.6.0",
     "file-loader": "^2.0.0",
     "istanbul-instrumenter-loader": "^3.0.1",
-    "jsdom": "^12.0.0",
+    "jsdom": "^12.1.0",
     "jsdom-global": "^3.0.2",
     "mocha": "^5.2.0",
     "mocha-webpack": "^2.0.0-beta.0",
@@ -43,7 +43,7 @@
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9",
-    "webpack-node-externals": "^1.6.0"
+    "webpack-node-externals": "^1.7.2"
   },
   "nyc": {
     "include": [
