@@ -16,7 +16,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   .avatar-initials {
     display: flex;
 
