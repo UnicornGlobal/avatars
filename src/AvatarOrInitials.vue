@@ -27,7 +27,7 @@
 </style>
 
 <script>
-const md5 = require('md5')
+import md5 from 'md5'
 
 export default {
   props: {
