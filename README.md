@@ -1,5 +1,7 @@
 # @unicorn/avatars
 
+[![Build Status](https://travis-ci.com/UnicornGlobal/avatars.svg?branch=dev)](https://travis-ci.com/UnicornGlobal/avatars)
+
 ## Avatar or Initials
 
 Displays either the initials or the image for an avatar.
@@ -58,6 +60,36 @@ You can override the default random colours yourself
 </avatar>
 ```
 
+## Custom Palette
+
+You can add a custom palette on the `palette` prop.
+
+This is the default configuration array.
+
+```
+[
+  '#f44336',
+  '#e91e63',
+  '#9c27b0',
+  '#673ab7',
+  '#3f51b5',
+  '#2196f3',
+  '#03a9f4',
+  '#00bcd4',
+  '#009688',
+  '#4caf50',
+  '#8bc34a',
+  '#cddc39',
+  '#ffeb3b',
+  '#ffc107',
+  '#ff9800',
+  '#ff5722',
+  '#795548',
+  '#9e9e9e',
+  '#607d8b'
+]
+```
+
 ## Details
 
 It uses the hash of the title to derive a number that it uses to select
@@ -68,5 +100,5 @@ the initial in light or dark font.
 
 # Roadmap
 
-- [ ] - Configuree own font
+- [ ] - Configure own font
 - [ ] - More efficient selection algo (needs md5.js atm, would be nice to not have that dependency)
