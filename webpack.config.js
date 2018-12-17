@@ -13,7 +13,7 @@ module.exports = {
     publicPath: './',
     filename: 'index.js',
     libraryTarget: 'umd',
-    library: 'vue-avatar-or-initials',
+    library: '@unicorn/avatars',
     umdNamedDefine: true
   },
   resolve: {

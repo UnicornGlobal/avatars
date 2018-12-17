@@ -30,7 +30,6 @@
   const md5 = require('md5')
 
   export default {
-    name: 'avatar-or-initials',
     props: {
       image: {
         required: false,
