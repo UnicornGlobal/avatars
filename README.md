@@ -1,4 +1,4 @@
-# @unicorn/avatars
+# @unicorns/avatars
 
 [![Build Status](https://travis-ci.com/UnicornGlobal/avatars.svg?branch=dev)](https://travis-ci.com/UnicornGlobal/avatars)
 
@@ -9,13 +9,13 @@ Displays either the initials or the image for an avatar.
 ## Install
 
 ```
-npm install @unicorn/avatars --save
+npm install @unicorns/avatars --save
 ```
 
 ## Usage
 
 ```
-import Avatar from '@unicorn/avatars'
+import Avatar from '@unicorns/avatars'
 ```
 
 Include it in the template you'd like to use it in.
