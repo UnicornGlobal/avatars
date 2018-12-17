@@ -118,20 +118,20 @@ export default {
   },
   computed: {
     width() {
-      return this.size + 'px'
+      return `${this.size}px`
     },
     height() {
-      return this.size + 'px'
+      return `${this.size}px`
     },
     initials() {
       return this.title.charAt(0)
     },
     initialsStyle() {
-      return 'width: ' + this.size + 'px; height: ' + this.size + 'px; border-radius: ' + this.size + 'px; background-color: ' + this.bgColour() + '; text-transform: uppercase; color: ' + this.textColour() + '; display: flex; justify-content: center; align-items: center;'
+      return `width: ${this.size}px; height: ${this.size}px; border-radius: ${this.size }px; background-color: ${this.bgColour()}; text-transform: uppercase; color: ${this.textColour()}; display: flex; justify-content: center; align-items: center;`
     },
     radius() {
       if (this.round) {
-        return 'border-radius: ' + this.size + 'px'
+        return `border-radius: ${this.size}px`
       }
     }
   }
