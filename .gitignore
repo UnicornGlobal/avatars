@@ -5,6 +5,7 @@ yarn-error.log
 .tmp
 .nyc_output
 coverage
+dist/
 
 # Editor directories and files
 .idea
