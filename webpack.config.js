@@ -13,7 +13,7 @@ module.exports = {
     publicPath: './',
     filename: 'index.js',
     libraryTarget: 'umd',
-    library: '@unicorn/avatars',
+    library: '@unicorns/avatars',
     umdNamedDefine: true
   },
   resolve: {
