@@ -27,8 +27,6 @@
 </style>
 
 <script>
-import md5 from 'md5'
-
 export default {
   props: {
     image: {
@@ -85,14 +83,26 @@ export default {
     }
   },
   methods: {
+    hash(word) {
+      var hash = 0
+      if (word.length == 0) {
+        return hash
+      }
+      for (var i = 0; i < word.length; i++) {
+        var char = word.charCodeAt(i)
+        hash = ((hash<<5)-hash)+char
+        hash = hash & hash
+      }
+      return Math.abs(hash)
+    },
     defaultColour() {
       if (this.colour) {
         return this.colour
       }
 
       const length = this.palette.length
-      const seed = md5(this.title)
-      const selected = seed.replace(/[A-Za-z]/g, '') % length
+      const seed = this.hash(this.title)
+      const selected = seed % length
       return this.palette[selected]
     },
     textColour() {

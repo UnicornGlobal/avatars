@@ -26,13 +26,13 @@ describe('AvatarOrInitials.vue', () => {
       localVue,
       propsData: {
         // This title produces a dark initial
-        title: 'abcde',
+        title: 'aaab11',
         round: false,
         size: 50
       }
     })
 
-    expect(avatarOrInitials.vm.initialsStyle).toBe('width: 50px; height: 50px; border-radius: 50px; background-color: #ffeb3b; text-transform: uppercase; color: #000000; display: flex; justify-content: center; align-items: center;');
+    expect(avatarOrInitials.vm.initialsStyle).toBe('width: 50px; height: 50px; border-radius: 50px; background-color: #cddc39; text-transform: uppercase; color: #000000; display: flex; justify-content: center; align-items: center;');
     expect(avatarOrInitials.find('.initials').text()).toBe('a')
     expect(avatarOrInitials.vm.radius).toBe(undefined);
   })

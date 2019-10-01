@@ -1,7 +1,7 @@
 {
   "name": "@unicorns/avatars",
   "description": "Easy avatars or initials",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Unicorn Global et al",
   "private": false,
   "license": "MIT",
@@ -14,9 +14,6 @@
     "type": "git",
     "url": "git+https://github.com/UnicornGlobal/avatars"
   },
-  "dependencies": {
-    "md5": "^2.2.1"
-  },
   "files": [
     "index.js",
     "index.js.map"
@@ -24,6 +21,7 @@
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "@trust/webcrypto": "^0.9.2",
     "@vue/test-utils": "^1.0.0-beta.29",
     "ajv": "^6.10.2",
     "babel-loader": "^8.0.6",
