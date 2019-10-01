@@ -101,7 +101,6 @@ the initial in light or dark font.
 # Roadmap
 
 - [ ] - Configure own font
-- [ ] - More efficient selection algo (needs md5.js atm, would be nice to not have that dependency)
 
 # Version History
 
