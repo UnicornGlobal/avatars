@@ -78,8 +78,7 @@ describe('AvatarOrInitials.vue', () => {
       propsData: {
         title: 'AAA',
         round: true,
-        color: 'red',
-        round: true
+        color: 'red'
       }
     })
     expect(avatarOrInitials.vm.radius).toBe('border-radius: 40px');
