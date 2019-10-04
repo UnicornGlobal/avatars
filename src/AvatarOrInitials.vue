@@ -41,6 +41,10 @@ export default {
       required: false,
       default: 40
     },
+    fontSize: {
+      required: false,
+      default: 20
+    },
     round: {
       type: Boolean,
       required: false,
@@ -137,7 +141,7 @@ export default {
       return this.title.charAt(0)
     },
     initialsStyle() {
-      return `width: ${this.size}px; height: ${this.size}px; border-radius: ${this.size }px; background-color: ${this.bgColour()}; text-transform: uppercase; color: ${this.textColour()}; display: flex; justify-content: center; align-items: center;`
+      return `width: ${this.size}px; font-size: ${this.fontSize}px; height: ${this.size}px; border-radius: ${this.size }px; background-color: ${this.bgColour()}; text-transform: uppercase; color: ${this.textColour()}; display: flex; justify-content: center; align-items: center;`
     },
     radius() {
       if (this.round) {

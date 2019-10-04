@@ -32,7 +32,7 @@ describe('AvatarOrInitials.vue', () => {
       }
     })
 
-    expect(avatarOrInitials.vm.initialsStyle).toBe('width: 50px; height: 50px; border-radius: 50px; background-color: #cddc39; text-transform: uppercase; color: #000000; display: flex; justify-content: center; align-items: center;');
+    expect(avatarOrInitials.vm.initialsStyle).toBe('width: 50px; font-size: 20px; height: 50px; border-radius: 50px; background-color: #cddc39; text-transform: uppercase; color: #000000; display: flex; justify-content: center; align-items: center;');
     expect(avatarOrInitials.find('.initials').text()).toBe('a')
     expect(avatarOrInitials.vm.radius).toBe(undefined);
   })
