@@ -8,7 +8,7 @@
            :height="height"
            :src="image">
       <div v-else class="avatar-initials" :style="initialsStyle">
-        <span class="initials strong">
+        <span class="initials strong" :style="initialsTextStyle">
           {{ initials }}
         </span>
       </div>
@@ -141,7 +141,10 @@ export default {
       return this.title.charAt(0)
     },
     initialsStyle() {
-      return `width: ${this.size}px; font-size: ${this.fontSize}px; height: ${this.size}px; border-radius: ${this.size }px; background-color: ${this.bgColour()}; text-transform: uppercase; color: ${this.textColour()}; display: flex; justify-content: center; align-items: center;`
+      return `width: ${this.size}px; height: ${this.size}px; border-radius: ${this.size }px; background-color: ${this.bgColour()}; text-transform: uppercase; color: ${this.textColour()}; display: flex; justify-content: center; align-items: center;`
+    },
+    initialsTextStyle() {
+      return `font-size: ${this.fontSize}px;`
     },
     radius() {
       if (this.round) {
