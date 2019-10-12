@@ -5,6 +5,7 @@ const { TextEncoder } = require('util')
 
 // make expect available globally
 global.expect = require('expect')
+window.Date = Date
 
 // Enable hashing
 global.TextEncoder = TextEncoder

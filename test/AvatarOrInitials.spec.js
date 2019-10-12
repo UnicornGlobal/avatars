@@ -28,13 +28,14 @@ describe('AvatarOrInitials.vue', () => {
         // This title produces a dark initial
         title: 'aaab11',
         round: false,
+        radius: 50,
         size: 50
       }
     })
 
     expect(avatarOrInitials.vm.initialsStyle).toBe('width: 50px; height: 50px; border-radius: 50px; background-color: #cddc39; text-transform: uppercase; color: #000000; display: flex; justify-content: center; align-items: center;');
     expect(avatarOrInitials.find('.initials').text()).toBe('a')
-    expect(avatarOrInitials.vm.radius).toBe(undefined);
+    expect(avatarOrInitials.vm.imageRadius).toBe(undefined);
   })
 
   it('mounts correctly with full values and renders an image', () => {
@@ -81,6 +82,7 @@ describe('AvatarOrInitials.vue', () => {
         color: 'red'
       }
     })
-    expect(avatarOrInitials.vm.radius).toBe('border-radius: 40px');
+    expect(avatarOrInitials.vm.radius).toBe(0);
+    expect(avatarOrInitials.vm.imageStyle).toBe('border-radius: 40px');
   })
 })
