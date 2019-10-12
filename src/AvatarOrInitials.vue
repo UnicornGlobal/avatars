@@ -3,7 +3,7 @@
     <div class="avatar">
       <img class="avatar-image"
            v-if="image"
-           :style="radius"
+           :style="imageStyle"
            :width="width"
            :height="height"
            :src="image">
@@ -17,6 +17,13 @@
 </template>
 
 <style scoped>
+  .avatar {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
   .avatar-initials {
     display: flex;
 
@@ -49,6 +56,10 @@ export default {
       type: Boolean,
       required: false,
       default: false
+    },
+    radius: {
+      required: false,
+      default: 0
     },
     backgroundColour: {
       type: String,
@@ -141,13 +152,17 @@ export default {
       return this.title.charAt(0)
     },
     initialsStyle() {
-      return `width: ${this.size}px; height: ${this.size}px; border-radius: ${this.size }px; background-color: ${this.bgColour()}; text-transform: uppercase; color: ${this.textColour()}; display: flex; justify-content: center; align-items: center;`
+      return `width: ${this.size}px; height: ${this.size}px; border-radius: ${this.radius }px; background-color: ${this.bgColour()}; text-transform: uppercase; color: ${this.textColour()}; display: flex; justify-content: center; align-items: center;`
     },
     initialsTextStyle() {
       return `font-size: ${this.fontSize}px;`
     },
-    radius() {
+    imageStyle() {
       if (this.round) {
+        if (this.radius > 0) {
+          return `border-radius: ${this.radius}px`
+        }
+
         return `border-radius: ${this.size}px`
       }
     }
